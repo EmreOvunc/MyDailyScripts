@@ -1,0 +1,13 @@
+DISPLAY=:0.0
+5 * * * * /usr/bin/python /home/monster/Scripts/backup.py
+30 * * * * /usr/bin/python /home/monster/Scripts/emre-mailclient-running.py
+@reboot /usr/bin/python /home/monster/Scripts/emre-mailclient-reboot.py
+0 */4 * * * /bin/sh /home/monster/Scripts/Update.sh
+45 */4 * * * /usr/bin/python /home/monster/Scripts/Emre-FileClient-Disk.py
+10 22 * * * /usr/bin/python /home/monster/Scripts/backup_weekly.py
+55 22 * * 3 /usr/bin/python /home/monster/Scripts/backup_tar.py
+15 * * * * /usr/bin/python /home/monster/Scripts/Emre-FileClient-Arp.py
+25 */4 * * * /usr/bin/python /home/monster/Scripts/Emre-FileClient-Inet.py
+#25 22 * * * /usr/bin/notify-send "Alert!" 'CTF' -i /usr/share/pixmaps/xfce4_xicon.png & paplay /usr/share/sounds/KDE-Sys-App-Error-Serious.ogg
+*/30 * * * * /usr/bin/notify-send "Hooop :)" 'Kalk ve küçük egzersizler yap.' -i /usr/share/pixmaps/gksu-icon.png & paplay /usr/share/sounds/KDE-Sys-Trash-Emptied.ogg
+
