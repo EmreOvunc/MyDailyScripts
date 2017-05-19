@@ -1,0 +1,18 @@
+#/ etc/network/interfaces
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet static
+    address 192.168.1.200 
+    netmask 255.255.255.0
+    gateway 192.168.1.1 
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+#/etc/wpa_supplicant/wpa_supplicant.conf
+network={
+  ssid="EmreOvunc"
+  psk="P4ssw0rd"
+  proto=RSN
+  key_mgmt=WPA-PSK
+  pairwise=CCMP
+  auth_alg=OPEN
+}
