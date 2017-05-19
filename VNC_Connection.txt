@@ -1,0 +1,8 @@
+# Server
+sudo apt-get install tightvncserver
+vncserver :1 -geometry 1920x1080
+
+# Client
+sudo apt-get install xtightvncviewer
+xtightvncviewr 192.168.1.100:1
+
