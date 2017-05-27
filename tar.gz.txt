@@ -1,0 +1,2 @@
+tar cvjf files.tar.xz files/
+tar cv files1/ files/ | gzip --best > files.tar.gz
