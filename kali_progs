@@ -1,7 +1,6 @@
 git clone https://github.com/DataSploit/datasploit.git
 git clone https://github.com/ChrisTruncer/EyeWitness.git
 git clone https://github.com/AndroBugs/AndroBugs_Framework.git
-git clone https://github.com/byt3bl33d3r/CrackMapExec.git
 git clone --recursive https://github.com/byt3bl33d3r/CrackMapExec
 git clone https://github.com/SpiderLabs/Responder.git
 git clone https://github.com/DanMcInerney/icebreaker.git
@@ -11,4 +10,3 @@ git clone https://github.com/anexia-it/winshock-test.git
 git clone https://github.com/nccgroup/vlan-hopping---frogger.git
 git clone https://github.com/EmreOvunc/ARP-Poisoning-Tool.git
 git clone https://github.com/nixawk/labs.git
-
