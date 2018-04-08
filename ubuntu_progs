@@ -1,0 +1,11 @@
+apt install aptitude python-pip python3-pip git net-tools python-scapy -y
+apt install leafpad apache2 kdenlive iptables-persistent python3 tcptrack -y
+apt install krita filezilla nmap macchanger rsync gparted fcrackzip aircrack-ng -y
+apt install python3-scapy apktool adb androguard audacity wireshark synaptic -y 
+apt install network-manager-ssh network-manager-openvpn network-manager-pptp -y 
+apt install speedometer exfat-utils exfat-fuse cups cifs-utils tmux foremost  -y 
+apt install aircrack-ng whatweb virtualbox virtualbox-ext-pack sqlmap samba -y
+add-apt-repository ppa:teejee2008/ppa
+apt update -y && apt install conky-manager -y
+add-apt-repository --remove ppa:teejee2008/ppa
+apt install unity-tweak-tool -y
