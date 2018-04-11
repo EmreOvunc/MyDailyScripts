@@ -10,3 +10,5 @@ git clone https://github.com/anexia-it/winshock-test.git
 git clone https://github.com/nccgroup/vlan-hopping---frogger.git
 git clone https://github.com/EmreOvunc/ARP-Poisoning-Tool.git
 git clone https://github.com/nixawk/labs.git
+git clone https://github.com/CoreSecurity/impacket.git
+git clone https://github.com/infodox/python-pty-shells.git
