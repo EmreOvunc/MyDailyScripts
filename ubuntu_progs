@@ -8,4 +8,4 @@ apt install aircrack-ng whatweb virtualbox virtualbox-ext-pack sqlmap samba -y
 add-apt-repository ppa:teejee2008/ppa
 apt update -y && apt install conky-manager -y
 add-apt-repository --remove ppa:teejee2008/ppa
-apt install unity-tweak-tool -y
+apt install unity-tweak-tool iodine -y
