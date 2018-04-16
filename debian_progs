@@ -4,4 +4,4 @@ apt install krita clang-3.9 filezilla nmap macchanger rsync gparted samba audaci
 apt install python3-scapy python-pip python3-pip apktool adb androguard android-platform-tools-base -y 
 apt install network-manager-ssh-gnome network-manager-openvpn-gnome network-manager-pptp-gnome python3 tcptrack -y 
 apt install speedometer exfat-utils exfat-fuse cups cifs-utils tmux foremost fcrackzip aircrack-ng sqlmap -y 
-apt install dnsrecon whatweb -y
+apt install dnsrecon iodine whatweb -y
