@@ -1,0 +1,1 @@
+cat Scan.gnmap | grep -E "Ports|open" | grep -v "close" |grep -w “80/open" | cut -d" " -f2
