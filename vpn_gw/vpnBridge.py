@@ -1,7 +1,7 @@
 import os
 import subprocess
-firefox_Proc = subprocess.Popen(['ifconfig | grep tun'], stdout=subprocess.PIPE, shell=True) 
-(out, err) = firefox_Proc.communicate()
+vpn_Proc = subprocess.Popen(['ifconfig | grep tun'], stdout=subprocess.PIPE, shell=True) 
+(out, err) = vpn_Proc.communicate()
 if out.decode() != "":
     pass
 else:
