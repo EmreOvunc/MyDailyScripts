@@ -5,7 +5,7 @@ files='192.168.*'
 nameserver='8.8.8.8'
 save='live_domains.txt'
 touch $save
-# tail is used for remove .emo local domain
+# tail is used for removing .emo local domain
 
 for file_name in $files; do
     read_file=`cat $file_name|cut -f2`
