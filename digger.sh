@@ -3,7 +3,9 @@
 
 files='192.168.*'
 nameserver='8.8.8.8'
-# tail is used for removing .emo local domain
+save='live_domains.txt'
+touch $save
+# tail is used for remove .emo local domain
 
 for file_name in $files; do
     read_file=`cat $file_name|cut -f2`
@@ -14,7 +16,7 @@ for file_name in $files; do
             result=`echo $digger`
             if [[ $result != *'not known'* ]]; then
                 domain=`echo $result|cut -d" " -f3`
-                echo $domain "|" $domains|sort -u > live_domains.txt
+                echo $domain "|" $domains|sort -u >> $save
             fi
         fi
     done
