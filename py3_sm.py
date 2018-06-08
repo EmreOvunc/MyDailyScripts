@@ -149,3 +149,5 @@ print('Total Viewed: ', total_viewed)
 print('Total User: ', total_user)
 print('Total No Action: ', total_noaction)
 print('Total Error: ', total_error)
+
+statistics.close()
