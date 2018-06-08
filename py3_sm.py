@@ -111,9 +111,9 @@ if args.file != '' or args.file != False:
                         fixedarr.append('-')
                     else: 
                         fixedarr.append('+')
-                    if flag_click != 0 or flag_viewed != 0:
+                    if flag_click == 0 and flag_viewed != 0:
                         mailview.write(str(data) + '\n')
-                    else:
+                    elif flag_click == 0 and flag_viewed == 0:
                         mailnoaction.write(str(data) + '\n')
             else:
                 print('[-]Please, use --column [COLUMN_NAME] to give a column name!')
