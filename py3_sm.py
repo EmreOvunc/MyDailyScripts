@@ -42,9 +42,20 @@ userclicked = open(dirc +"/user_clicked.txt","a")
 system('touch ' + dirc +'/user_viewed.txt')
 userviewed = open(dirc +"/user_viewed.txt","a")
 
-clickedarr = []
-viewedarr  = []
-fixedarr   = []
+system('touch ' + dirc +'/mail_clicked.txt')
+mailclick = open(dirc +"/mail_clicked.txt","a")
+
+system('touch ' + dirc +'/mail_only_viewed.txt')
+mailview = open(dirc +"/mail_only_viewed.txt","a")
+
+system('touch ' + dirc +'/mail_no_action.txt')
+mailnoaction = open(dirc +"/mail_no_action.txt","a")
+
+clickedarr  = []
+viewedarr   = []
+fixedarr    = []
+mailviewed  = []
+mailclicked = []
 
 total_clicked    = 0
 total_notclicked = 0
@@ -64,7 +75,6 @@ for lines in viewed_line:
         viewedarr.append(md5sums)
 
 if args.file != '' or args.file != False:
-    try:
         excel = ExcelFile(args.file)
         if args.sheet_name != "" and args.sheet_name != None:
             sheet = excel.parse(args.sheet_name)
@@ -88,6 +98,7 @@ if args.file != '' or args.file != False:
                         total_notclicked += 1
                     else: 
                         userclicked.write('+\n')
+                        mailclicked.append(data)
                         total_clicked += 1
                     flag_viewed = 0
                     for whoviewedsum in viewedarr:
@@ -100,13 +111,14 @@ if args.file != '' or args.file != False:
                         fixedarr.append('-')
                     else: 
                         fixedarr.append('+')
+                    if flag_click != 0 or flag_viewed != 0:
+                        mailview.write(str(data) + '\n')
+                    else:
+                        mailnoaction.write(str(data) + '\n')
             else:
                 print('[-]Please, use --column [COLUMN_NAME] to give a column name!')
         else:
             print('[-]Please, use --sheet-name [SHEET_NAME] to give a sheet name!')
-    except:
-        print('[-]' + str(args.file) + ' file could not found!')
-        exit()
 else:
     print('[-]Please, use --file [FILENAME] to select an excel file!')
     exit()
@@ -136,18 +148,26 @@ for ind in range(0, len(fixedarr)):
 userviewed.close()
 user_click.close()
 
-statistics.write('Total Clicked: ' + str(total_clicked) + '\n')
-statistics.write('Total NOT Clicked: ' + str(total_notclicked) + '\n')
-statistics.write('Total Viewed: ' + str(total_viewed) + '\n')
-statistics.write('Total User: ' + str(total_user) + '\n')
-statistics.write('Total No Action: ' + str(total_noaction) + '\n')
-statistics.write('Total Error: ' + str(total_error) + '\n')
+statistics.write('Total Clicked     : ' + str(total_clicked)    + '\n')
+statistics.write('Total NOT Clicked : ' + str(total_notclicked) + '\n')
+statistics.write('Total Viewed      : ' + str(total_viewed)     + '\n')
+statistics.write('Total No Action   : ' + str(total_noaction - total_error) + '\n')
+statistics.write('Total User        : ' + str(total_user)       + '\n')
+statistics.write('Only Viewed       : ' + str(total_viewed - total_clicked) + '\n')
+statistics.write('Total Error       : ' + str(total_error)      + '\n')
 
-print('Total Clicked: ', total_clicked)
-print('Total NOT Clicked: ', total_notclicked)
-print('Total Viewed: ', total_viewed)
-print('Total User: ', total_user)
-print('Total No Action: ', total_noaction)
-print('Total Error: ', total_error)
+print('Total Clicked     : ', total_clicked)
+print('Total NOT Clicked : ', total_notclicked)
+print('Total Viewed      : ', total_viewed)
+print('Total No Action   : ', total_noaction - total_error)
+print('Total User        : ', total_user)
+print('Only Viewed       : ', total_viewed - total_clicked)
+print('Total Error       : ', total_error)
 
 statistics.close()
+
+for mails in mailclicked:
+    mailclick.write(mails + "\n")
+mailclick.close()
+mailnoaction.close()
+mailview.close()
