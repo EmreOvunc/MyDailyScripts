@@ -2,7 +2,7 @@
 # EmreOvunc
 # info@emreovunc.com
 
-from pandas import ExcelFile, ExcelWriter, DataFrame
+from pandas import ExcelFile
 from argparse import ArgumentParser
 from os import system, path
 from hashlib import md5
