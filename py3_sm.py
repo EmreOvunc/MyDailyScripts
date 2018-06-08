@@ -33,6 +33,9 @@ system('mkdir ' + dirc)
 system('touch ' + dirc +'/user_md5s.txt')
 usermd5s = open(dirc +"/user_md5s.txt","a")
 
+system('touch ' + dirc +'/statistics.txt')
+statistics = open(dirc +"/statistics.txt","a")
+
 system('touch ' + dirc +'/user_clicked.txt')
 userclicked = open(dirc +"/user_clicked.txt","a")
 
@@ -132,6 +135,13 @@ for ind in range(0, len(fixedarr)):
 
 userviewed.close()
 user_click.close()
+
+statistics.write('Total Clicked: ' + str(total_clicked) + '\n')
+statistics.write('Total NOT Clicked: ' + str(total_notclicked) + '\n')
+statistics.write('Total Viewed: ' + str(total_viewed) + '\n')
+statistics.write('Total User: ' + str(total_user) + '\n')
+statistics.write('Total No Action: ' + str(total_noaction) + '\n')
+statistics.write('Total Error: ' + str(total_error) + '\n')
 
 print('Total Clicked: ', total_clicked)
 print('Total NOT Clicked: ', total_notclicked)
