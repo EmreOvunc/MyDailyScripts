@@ -20,3 +20,9 @@ git clone https://github.com/byt3bl33d3r/DeathStar.git
 git clone https://github.com/deepzec/Bad-Pdf.git
 git clone https://github.com/staaldraad/tcpprox
 git clone https://github.com/caffix/amass.git
+git clone https://github.com/pentestmonkey/windows-privesc-check.git
+git clone https://github.com/GDSSecurity/Windows-Exploit-Suggester.git
+git clone https://github.com/OJ/gobuster.git
+git clone https://github.com/droope/droopescan.git
+git clone https://github.com/rsmudge/metasploit-loader.git
+wget https://github.com/rsmudge/metasploit-loader/files/1238757/main64.zip -o loader64.zip
