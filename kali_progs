@@ -26,3 +26,4 @@ git clone https://github.com/OJ/gobuster.git
 git clone https://github.com/droope/droopescan.git
 git clone https://github.com/rsmudge/metasploit-loader.git
 wget https://github.com/rsmudge/metasploit-loader/files/1238757/main64.zip -o loader64.zip
+git clone https://github.com/TheRook/subbrute.git
