@@ -5,7 +5,9 @@ login=`curl -i -s -k  -X $'POST' \
     --data-binary $'{\"username\":\"emre\",\"password\":\"Passw0rd\"}' \
     $'https://localhost:8834/session'`
 tokenim=`echo $login|cut -d":" -f15|cut -d"}" -f1| sed 's:^.\(.*\).$:\1:'`
-dir=`ls -la|grep "drwxr-xr-x"|cut -d" " -f13|sort -u`
+dir=`ls -la|awk '{print $9}'|sort -u`
+rm -rf dizin.txt
+touch dizin.txt
 for dizin in $(echo $dir); do
 	if [[ $dizin =~ [[:alpha:]].*[[:alpha:]].*[[:alpha:]].*[[:alpha:]] ]]; then
 		cmd=`cat $dizin/*.gnmap|egrep "Host|Up"|cut -d" " -f2|sort -u > $dizin/live.txt`
