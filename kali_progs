@@ -28,3 +28,8 @@ git clone https://github.com/rsmudge/metasploit-loader.git
 wget https://github.com/rsmudge/metasploit-loader/files/1238757/main64.zip -o loader64.zip
 git clone https://github.com/TheRook/subbrute.git
 git clone https://github.com/EmreOvunc/MyDailyScripts.git
+git clone https://github.com/securestate/eapeak.git
+git clone https://github.com/s0lst1c3/eaphammer.git
+git clone https://github.com/evilmog/ntlmv1-multi.git
+git clone https://github.com/purpleteam/snarf.git
+git clone https://github.com/WJDigby/apd_launchpad.git
