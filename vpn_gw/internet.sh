@@ -9,3 +9,6 @@ sudo echo "nameserver 1.1.1.1" >> resolv.conf
 sudo mv resolv.conf /etc/resolv.conf
 sudo iptables -A FORWARD --in-interface eth0 -j ACCEPT
 sudo iptables -t nat -A POSTROUTING -o wlan1 -j MASQUERADE
+sudo iptables -A INPUT -i wlan1 -p tcp --dport 443 -j DROP
+sudo iptables -A INPUT -i wlan1 -p tcp --dport 80 -j DROP
+sudo iptables -A INPUT -i wlan1 -p tcp --dport 22 -j DROP
