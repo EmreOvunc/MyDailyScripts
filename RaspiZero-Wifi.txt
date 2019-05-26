@@ -1,4 +1,4 @@
-#/ etc/network/interfaces
+#nano -cB /etc/network/interfaces
 auto wlan0
 allow-hotplug wlan0
 iface wlan0 inet static
@@ -7,7 +7,7 @@ iface wlan0 inet static
     gateway 192.168.1.1 
     wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 
-#/etc/wpa_supplicant/wpa_supplicant.conf
+#nano -cB /etc/wpa_supplicant/wpa_supplicant.conf
 network={
   ssid="EmreOvunc"
   psk="P4ssw0rd"
