@@ -2,10 +2,12 @@
 auto wlan0
 allow-hotplug wlan0
 iface wlan0 inet static
-    address 192.168.1.200 
-    netmask 255.255.255.0
-    gateway 192.168.1.1 
-    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+	address 192.168.2.101
+	netmask 255.255.255.0
+	broadcast 192.168.2.255
+	network 192.168.2.0
+	gateway 192.168.2.1
+	wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 
 #nano -cB /etc/wpa_supplicant/wpa_supplicant.conf
 network={
@@ -16,3 +18,10 @@ network={
   pairwise=CCMP
   auth_alg=OPEN
 }
+
+#PiHole
+curl -sSL https://install.pi-hole.net | bash
+
+#IPv6 -> Raspi 3
+sudo nano -c /etc/sysctl.conf 
+#net.ipv6.conf.all.disable_ipv6 = 1
