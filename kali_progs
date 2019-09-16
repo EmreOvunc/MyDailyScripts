@@ -39,3 +39,4 @@ git clone https://github.com/guelfoweb/knock.git
 git clone https://github.com/robotattackorg/robot-detect.git
 git clone https://github.com/Antonin-Deniau/cave_miner.git
 git clone https://github.com/RUB-NDS/Metadata-Attacker.git
+apt install bloodhound python3-scapy golang
