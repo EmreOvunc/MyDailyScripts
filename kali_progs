@@ -41,3 +41,5 @@ git clone https://github.com/Antonin-Deniau/cave_miner.git
 git clone https://github.com/RUB-NDS/Metadata-Attacker.git
 apt install bloodhound python3-scapy golang sublist3r -y
 #https://github.com/michenriksen/aquatone/releases/
+git clone https://github.com/jordanpotti/CloudScraper.git
+git clone https://github.com/GerbenJavado/LinkFinder.git
