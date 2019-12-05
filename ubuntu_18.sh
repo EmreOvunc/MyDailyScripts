@@ -1,5 +1,5 @@
 #nano /etc/netplan/50-cloud-init.yaml
-#netplan appöy
+#netplan apply
 network:
     ethernets:
         enp0s3:
