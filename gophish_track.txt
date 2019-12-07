@@ -1,0 +1,4 @@
+#Create scenario
+cat gophish.log |grep "10.20.30.40"|grep POST|grep -v login|grep campaigns|grep 2019-12-06
+#Delete scenario
+cat gophish.log |grep "10.20.30.40"|grep DELETE|grep 2019-12-06
