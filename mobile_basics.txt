@@ -1,0 +1,6 @@
+# apktool d testbank.apk
+# -name *.xml *.smali
+#Find HTTP Requests
+find testbank/ -type f -name *.xml -exec cat {} \;|grep -i http|egrep -v "schemas|w3"
+#Find IPv4 Addresses
+find testbank/ -type f -name *.xml -exec cat {} \;|grep -E "([0-9]{1,3}[\.]){3}[0-9]{1,3}"
