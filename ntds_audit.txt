@@ -1,0 +1,9 @@
+# Domain Controller
+ntdsutil
+activate instance ntds
+ifm
+create full c:\audit
+quit
+quit
+# Analyzing
+.\NtdsAudit.exe "ntds.dit" -s "SYSTEM" -p pwdump.txt --users-csv users.csv
