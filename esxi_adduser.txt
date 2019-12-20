@@ -1,0 +1,6 @@
+#Shell
+cd /bin/
+ln -s /usr/lib/vmware/busybox/bin/busybox adduser
+adduser -s /bin/ash -g Administrator -G root -h / [username]
+#UI
+Actions -> Permissions -> Add user
