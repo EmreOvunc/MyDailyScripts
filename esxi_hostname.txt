@@ -1,0 +1,3 @@
+Networking >>> TCP/IP configuration
+TCP/IP Stack Configuration >>> DNS Configuration
+Host name >> [hostname]
