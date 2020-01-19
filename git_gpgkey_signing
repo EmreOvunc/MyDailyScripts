@@ -1,0 +1,5 @@
+gpg --full-generate-key
+gpg --list-secret-keys --keyid-format LONG
+gpg --armor --export [GPG_KEY_ID]
+#Go to your GitHub account via browser
+Settings >> SSH and GPG keys >> New GPG key >> Paste it.
