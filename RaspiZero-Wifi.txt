@@ -14,7 +14,7 @@ network={
   ssid="EmreOvunc"
   psk="P4ssw0rd"
   proto=RSN
-  key_mgmt=WPA-PSK
+  key-mgmt=WPA-PSK
   pairwise=CCMP
   auth_alg=OPEN
 }
