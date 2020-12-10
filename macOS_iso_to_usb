@@ -1,0 +1,5 @@
+hdiutil convert -format UDRW -o debian.img debian-10.6.0-amd64-netinst.iso
+mv debian.img.dmg debian.img     
+diskutil list 
+diskutil unmountDisk /dev/diskXXXX
+sudo dd if=debian.img of=/dev/rdiskXXXX bs=1m
